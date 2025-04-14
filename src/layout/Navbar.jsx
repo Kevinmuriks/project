@@ -1,17 +1,21 @@
 // src/components/Navbar.jsx
-export default function Navbar() {
+import React from 'react';
+
+const Navbar = () => {
   return (
-    <nav className="bg-neutral-900/80 backdrop-blur-md border-b border-neutral-800 text-white px-6 py-4 flex justify-between items-center">
-      <div className="text-xl font-semibold tracking-widest text-cyan-400">
-        SPARTAN GROUP
+    <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-md p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold tracking-wider">Spartan Group</h1>
+        <ul className="flex space-x-6 text-sm font-medium">
+          <li className="hover:text-blue-400 cursor-pointer">Home</li>
+          <li className="hover:text-blue-400 cursor-pointer">Projects</li>
+          <li className="hover:text-blue-400 cursor-pointer">Articles</li>
+          <li className="hover:text-blue-400 cursor-pointer">About</li>
+        </ul>
       </div>
-      <ul className="flex gap-6 text-sm font-medium">
-        <li className="hover:text-cyan-400 transition duration-300 cursor-pointer">Home</li>
-        <li className="hover:text-cyan-400 transition duration-300 cursor-pointer">Projects</li>
-        <li className="hover:text-cyan-400 transition duration-300 cursor-pointer">Articles</li>
-        <li className="hover:text-cyan-400 transition duration-300 cursor-pointer">About</li>
-      </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;
 

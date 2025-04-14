@@ -1,7 +1,7 @@
 // Import Tailwind's default color palette
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors'
 
-module.exports = {
+export default {
   // Configure how Tailwind scans your files for classes
   content: [
     './index.html',        // Include your HTML file (for Vite or basic HTML setups)
@@ -9,20 +9,6 @@ module.exports = {
   ],
 
   theme: {
-    // Override or extend default colors
-    colors: {
-      gray: colors.coolGray,       // Cooler neutral tones for a modern, muted base
-      blue: colors.lightBlue,      // Nice light blues, good for UI highlights
-      red: colors.rose,            // Rose tone for alerts/errors
-      pink: colors.fuchsia,        // Fuchsia for accent colors
-
-      // You can also define custom ones:
-      primary: '#0f172a',          // Custom primary (deep slate-like blue)
-      accent: '#22d3ee',           // Accent color (cyan-ish)
-      white: '#ffffff',
-      black: '#000000',
-    },
-
     // Customize fonts for headings and text
     fontFamily: {
       sans: ['Inter', 'sans-serif'],        // Clean, modern body font
@@ -31,6 +17,20 @@ module.exports = {
 
     // Extend the default design tokens (spacing, border radius, etc.)
     extend: {
+       // Override or extend default colors
+      colors: {
+        neutral: colors.neutral,        // Cooler neutral tones for a modern, muted base
+        blue: colors.sky,      // Nice light blues, good for UI highlights
+        red: colors.rose,            // Rose tone for alerts/errors
+        pink: colors.fuchsia,        // Fuchsia for accent colors
+
+        // You can also define custom ones:
+        primary: '#0f172a',          // Custom primary (deep slate-like blue)
+        accent: '#22d3ee',           // Accent color (cyan-ish)
+        white: '#ffffff',
+        black: '#000000',
+      },
+
       spacing: {
         '128': '32rem',   // Useful for large sections (e.g. hero banner height)
         '144': '36rem',
