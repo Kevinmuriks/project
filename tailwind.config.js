@@ -19,7 +19,7 @@ export default {
     extend: {
        // Override or extend default colors
       colors: {
-        neutral: colors.neutral,        // Cooler neutral tones for a modern, muted base
+        neutral: colors.neutral,        // Cooler neutral tones for a modern, muted basecs
         blue: colors.sky,      // Nice light blues, good for UI highlights
         red: colors.rose,            // Rose tone for alerts/errors
         pink: colors.fuchsia,        // Fuchsia for accent colors
